@@ -41,7 +41,9 @@ const startServer = async () => {
   try {
     await connectDB();
     await createTables();
-
+    app.get("/", (req: Request, res: Response) => {
+      res.send("Weather API is running");
+    });
     app.use("/analytics", weatherRoutes);
 
     app.use((req: Request, res: Response) => {
