@@ -5,6 +5,7 @@ import sequelize from "../db/config";
 const WeatherDetails = sequelize.define("CityWeatherDetails", {
   id: {
     type: DataTypes.INTEGER,
+    
     primaryKey: true,
     autoIncrement: true,
   },
